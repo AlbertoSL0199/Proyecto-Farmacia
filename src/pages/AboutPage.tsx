@@ -10,7 +10,7 @@ export const AboutPage = () => {
         className="h-[500px] w-full object-cover"
       />
       <div className="flex flex-col gap-4 tracking-tighter leading-7 text-sm font-medium text-slate-800">
-        <p>Blalsssssssdalal</p>
+        <p>Blalssssssgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggsdalal</p>
         <p>blabssssssabab</p>
         <h2 className="text-3xl font-semibold tracking-tight mt-8 mb-4">
           No esperes mas y compra tus medicamentos en Medsssss
