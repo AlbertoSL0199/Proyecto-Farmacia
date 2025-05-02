@@ -6,13 +6,10 @@ const availableBrands = [
     */
   "Alergia",
   "Antitabaco",
-  "Antisepticos",
   "Control de Peso",
   "Cuidado Bucal",
   "Dolor y Fiebre",
-  "Gripe, Tos y Resfriados",
   "Lubricantes",
-  "Mareo",
   "Picaduras Repelentes Insectos",
   "Vitaminas",
 ];

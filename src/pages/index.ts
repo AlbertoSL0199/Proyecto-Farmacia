@@ -5,6 +5,6 @@ export * from './ShipmentsPage'
 
 /*
 git add .
-git commit -m "   "
+git commit -m " actualizacion en bd   "
 git push
 */
