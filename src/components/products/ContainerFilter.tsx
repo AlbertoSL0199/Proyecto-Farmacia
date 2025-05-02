@@ -9,13 +9,12 @@ const availableBrands = [
   "Antisepticos",
   "Control de Peso",
   "Cuidado Bucal",
-  "cuidado de la Piel",
-  "cuidado del Cabello",
   "Dolor y Fiebre",
   "Gripe, Tos y Resfriados",
   "Lubricantes",
   "Mareo",
   "Picaduras Repelentes Insectos",
+  "Vitaminas",
 ];
 export const ContainerFilter = () => {
   return (
