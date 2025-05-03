@@ -54,21 +54,6 @@ export const CardProduct = ({
       <div className="flex flex-col gap-1 items-center">
         <p className="text-[15px] font-medium">{name}</p>
         <p className="text-[15px] font-medium">{formatPrice(price)}</p>
-        <div className="flex gap-3">
-          {colors.map((color) => (
-            <span
-              key={color.color}
-              className={`grid place-items-center w-5 h-5 rounded-full cursor-pointer`}
-            >
-              <span
-                className="w-[14px] h-[14px] rounded-full"
-                style={{
-                  backgroundColor: color.color,
-                }}
-              />
-            </span>
-          ))}
-        </div>
       </div>
       <div className="absolute top-2 left-2">
         {stock === 0 && <span>Agotado</span>}
