@@ -2,10 +2,17 @@ import { CardProduct } from "../components/products/CardProduct";
 import { ContainerFilter } from "../components/products/ContainerFilter";
 import { allCelulares } from "../data/initialData";
 import { prepareProducts } from "../helpers";
+import { useProducts } from "../hooks";
 
 export const MedPages = () => {
-  const preparedProducts = prepareProducts(allCelulares);
+  /*
+  const {products, isLoading} = useProducts();
+  if (isLoading || !products) return <p>Cargando.... </p>;  
+ 
+  const preparedProducts = prepareProducts( products);
 
+  */ 
+  const preparedProducts = prepareProducts( allCelulares);
   return (
     <>
       <h1 className="text-5xl font-semibold text-center mb-12">Medicamentos</h1>

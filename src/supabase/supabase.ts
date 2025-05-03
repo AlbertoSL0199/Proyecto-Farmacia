@@ -191,6 +191,7 @@ export type Database = {
       }
       products: {
         Row: {
+          brand: string
           created_at: string
           description: Json
           feature: string[]
@@ -200,9 +201,9 @@ export type Database = {
           price: number
           slug: string
           stock: number
-          type: string
         }
         Insert: {
+          brand: string
           created_at?: string
           description: Json
           feature: string[]
@@ -212,9 +213,9 @@ export type Database = {
           price: number
           slug: string
           stock: number
-          type: string
         }
         Update: {
+          brand?: string
           created_at?: string
           description?: Json
           feature?: string[]
@@ -224,7 +225,6 @@ export type Database = {
           price?: number
           slug?: string
           stock?: number
-          type?: string
         }
         Relationships: []
       }
