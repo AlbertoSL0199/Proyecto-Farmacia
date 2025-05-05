@@ -5,8 +5,7 @@ import { prepareProducts } from "../helpers";
 import { useProducts } from "../hooks";
 
 export const HomePage = () => {
-
-  //const {products, isLoading} = useProducts();
+  const { products, isLoading } = useProducts();
 
   const preparedRecentProducts = prepareProducts(recentCelulares);
   const preparedPopularProducts = prepareProducts(popularCelulares);
