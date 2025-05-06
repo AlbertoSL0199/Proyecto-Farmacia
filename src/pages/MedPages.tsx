@@ -3,6 +3,7 @@ import { CardProduct } from "../components/products/CardProduct";
 import { ContainerFilter } from "../components/products/ContainerFilter";
 import { prepareProducts } from "../helpers";
 import { useFilteredProducts,  } from "../hooks";
+import { Pagination } from "../components/shared/Pagination";
 
 export const MedPages = () => {
   const [page, setPage] = useState(1);
@@ -36,7 +37,7 @@ export const MedPages = () => {
           </div>
         ) : (
           <div className="col-span-2 lg:col-span-2 xl:col-span-4 flex flex-col gap-12">
-            <div className="grid grid-cols-2 gap-3 gap-y-10 xl:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 gap-y-10 xl:grid-cols-3">
               {preparedProducts.map((product) => (
                 <CardProduct
                   key={product.id}
@@ -50,6 +51,11 @@ export const MedPages = () => {
               ))}
             </div>
             {/* toda la pagina */}
+            <Pagination
+              totalItems={totalProducts}
+              page={page}
+              setPage={setPage}
+            />
           </div>
         )}
       </div>

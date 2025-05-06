@@ -21,7 +21,7 @@ export const getFilteredProducts = async ({
   page: number;
   brands: string[];
 }) => {
-  const itemsPerPage = 10;
+  const itemsPerPage = 9;
   const from = (page - 1) * itemsPerPage;
   const to = from + itemsPerPage - 1;
 
@@ -43,4 +43,37 @@ export const getFilteredProducts = async ({
     throw new Error(error.message);
   }
   return { data, count };
+};
+
+export const getRecentProducts = async () => {
+  const { data: products, error } = await supabase
+    .from("products")
+    .select("*, variants(*)")
+    .order("created_at", { ascending: false })
+    .limit(4);
+  if (error) {
+    console.log(error.message);
+    throw new Error(error.message);
+  }
+
+  return products;
+};
+
+export const getRandomProducts = async () => {
+  const { data: products, error } = await supabase
+    .from("products")
+    .select("*, variants(*)")
+    .limit(20);
+
+  if (error) {
+    console.log(error.message);
+    throw new Error(error.message);
+  }
+  //se randoriza 4 productos
+
+  const randomProducts = products
+    .sort(() => 0.5 - Math.random()) //sortea de los 20 productos cargados
+    .slice(0, 4);
+    
+  return randomProducts;
 };

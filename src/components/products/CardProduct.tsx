@@ -33,7 +33,7 @@ export const CardProduct = ({
   const stock = selectedVariant?.stock || 0;
 
   return (
-    <div className="flex flex-col gap-6 relative">
+    <div className="flex flex-col gap-6 relative text-center">
       <Link 
             to={`/medicamentos/${slug}`} 
             className="flex relative group overflow-hidden"
