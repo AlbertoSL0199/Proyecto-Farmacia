@@ -21,7 +21,7 @@ export const Banner = () => {
         <p className="text-lg mb-8 lg:text-2xl">
             Descubre nuevas ofertas 
         </p>
-        <Link to='/medicamento' className="bg-gray-900 hover:bg-gray-950 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out">
+        <Link to='/medicamentos' className="bg-gray-900 hover:bg-gray-950 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out">
             Ver Medicamento        
         </Link>
       </div>

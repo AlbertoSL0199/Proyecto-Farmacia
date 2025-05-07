@@ -20,7 +20,7 @@ export const AboutPage = () => {
           traves de nuestro correo electronico:
           <a href="mailto:ventas@medicamentosmartina.com">
             ventas@medicamentosmartina.com
-          </a>{" "}
+          </a>
           o llamando al numero <a href="tel:954863269">954863269</a>
         </p>
       </div>

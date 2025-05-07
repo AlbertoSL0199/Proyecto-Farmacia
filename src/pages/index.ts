@@ -1,10 +1,12 @@
 export * from './AboutPage'
 export * from './HomePage'
 export * from './MedPages'
+export * from './MedPage'
 export * from './ShipmentsPage'
 
 /*
 git add .
 git commit -m " actualizacion en bd   "
-git push
+git tag -a v1.0-paginacion-filtrado -m "paginacion, filtrado de los productos"
+git push origin v1.0-paginacion-filtrado
 */

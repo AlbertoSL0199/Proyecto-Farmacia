@@ -10,17 +10,17 @@ export const navbarlinks = [
     {
         id: 2,
         title: 'MEDICAMENTOS',
-        href: '/medicamento',
+        href: '/medicamentos',
     },
     {
         id: 3,
         title: 'PARAFARMACIA',
-        href: '/parafarmacia',
+        href: '/parafarmacias',
     },
     {
         id: 4,
         title: 'ORTOPEDIA',
-        href: '/ortopedia',
+        href: '/ortopedias',
     },
     {
         id: 5,
