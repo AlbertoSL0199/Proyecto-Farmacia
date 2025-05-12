@@ -3,15 +3,14 @@ import { RootLayout } from "../layouts/RootLayout";
 import {
   AboutPage,
   HomePage,
-  MedPages,
+  MedsPages,
   ShipmentsPage,
-  MedPage
+  MedPage,
 } from "../pages";
-import {} from "../components/home/Shipments";
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <RootLayout />,
     children: [
       {
@@ -19,8 +18,8 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "envios",
-        element: <ShipmentsPage />,
+        path: "medicamentos",
+        element: <MedsPages />,
       },
       //define el path para la ruta de los productos
       {
@@ -28,8 +27,8 @@ export const router = createBrowserRouter([
         element: <MedPage />,
       },
       {
-        path: "medicamentos",
-        element: <MedPages />,
+        path: "envios",
+        element: <ShipmentsPage />,
       },
       {
         path: "nosotros",

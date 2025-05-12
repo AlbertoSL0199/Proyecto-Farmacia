@@ -1,6 +1,6 @@
 export const AboutPage = () => {
   return (
-    <div className=" space-y-5">
+    <div className="px-15 space-y-5">
       <h1 className="text-center text-4xl font-semibold tracking-tight mb-5">
         Nuestra Empresa
       </h1>

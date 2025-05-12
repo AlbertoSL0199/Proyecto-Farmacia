@@ -29,6 +29,44 @@ export const navbarlinks = [
     },
 ]
 
+export const navbarmobilinks = [
+    {
+        id: 1,
+        title: 'INICIO',
+        href: '/',
+    },
+    {
+        id: 2,
+        title: 'MEDICAMENTOS',
+        href: '/medicamentos',
+    },
+    {
+        id: 3,
+        title: 'PARAFARMACIA',
+        href: '/parafarmacias',
+    },
+    {
+        id: 4,
+        title: 'ORTOPEDIA',
+        href: '/ortopedias',
+    },
+    {
+        id: 5,
+        title: 'SOBRE NOSOTROS',
+        href: '/nosotros',
+    },
+    {
+        id: 6,
+        title: 'ENVIOS Y DEVOLUCIONES',
+        href: '/envios',
+    },
+    {
+        id: 7,
+        title: 'CONTACTO',
+        href: '/contacto',
+    },
+]
+
 export const sociaLinks = [
     {
         id: 1,

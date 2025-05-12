@@ -1,12 +1,13 @@
 import { EditorContent, JSONContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import { Json } from "../../supabase/supabase";
 interface Props {
-  content: JSONContent;
+  content: JSONContent | Json;
 }
 export const ProductDescription = ({ content }: Props) => {
   const editor = useEditor({
     extensions: [StarterKit],
-    content,
+    content: content as JSONContent,
     editable: false,
     editorProps: {
       attributes: {
@@ -16,10 +17,12 @@ export const ProductDescription = ({ content }: Props) => {
   });
   return (
     <div className="mt-12">
-      <h2 className="text-2xl font-bold text-center mb-8 underline">
+      <h1 className="text-3xl font-bold text-center mb-8 underline">
         Descripción
-      </h2>
-      <EditorContent editor={editor} />
+      </h1>
+      <div className="text-xs px-15 text-justify rounded-4xl ">
+        <EditorContent editor={editor} />
+      </div>
     </div>
   );
 };

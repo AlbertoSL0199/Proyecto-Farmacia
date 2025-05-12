@@ -3,7 +3,7 @@ export const Newsletter = () => {
         <div className="relative bg-gray-500 text-white py-20">
             <div
             className="absolute inset-0 bg-cover bg-center opacity-70 h-full"
-            style={{backgroundImage:'url(/public/banner.jpg)'}}
+            style={{backgroundImage:'url(/banner.jpg)'}}
         />
             <div className="containe z-10 relative p-5 md:p-0">
                 <div className="w-full text-black bg-white p-12 space-y-5 md:w-[50%] lg:w-[40%]">

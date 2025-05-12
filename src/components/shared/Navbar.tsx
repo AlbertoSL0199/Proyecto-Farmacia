@@ -3,7 +3,18 @@ import { navbarlinks } from "../../constants/links";
 import { HiOutlineSearch, HiOutlineShoppingBag } from "react-icons/hi";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { Logo } from "./Logo";
+import { useGlobalStore } from "../../store/global.store";
+import { useCartStore } from "../../store/cart.store";
 export const Navbar = () => {
+  //setea la funcion de abrir la barra de navegacion
+  const openSheet = useGlobalStore((state) => state.openSheet);
+  //definimos la funcion para el boton de la barra de navegacion
+  const setActiveNavMovile = useGlobalStore(
+    (state) => state.setActiveNavMobile
+  );
+  const totalItemsInCart = useCartStore((state) => state.totalItemsInCart); // se obtiene el total de items en el carrito
+  
+
   return (
     <header className="bg-white text-black py-4 flex items-center justify-between px-5 border-b border-slate-200 lg:px-12">
       <Logo />
@@ -24,7 +35,7 @@ export const Navbar = () => {
       </nav>
 
       <div className="flex gap-5 items-center">
-        <button>
+        <button onClick={() => openSheet("search")}>
           <HiOutlineSearch size={25} />
         </button>
         <div className="relative">
@@ -35,14 +46,14 @@ export const Navbar = () => {
             A
           </Link>
         </div>
-        <button className="relative">
+        <button className="relative" onClick={() => openSheet("cart")}>
           <span className="absolute -bottom-2 -right-2 w-5 h-5 grid place-items-center bg-black text-white text-xs rounded-full">
-            0
+            {totalItemsInCart}
           </span>
           <HiOutlineShoppingBag size={25} />
         </button>
       </div>
-      <button className="md:hidden">
+      <button className="md:hidden" onClick={() => setActiveNavMovile(true)}>
         <FaBarsStaggered size={25} />
       </button>
     </header>

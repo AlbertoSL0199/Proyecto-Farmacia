@@ -1,6 +1,6 @@
 export const ShipmentsPage = () => {
   return (
-    <div className="text-justify ml-4">
+    <div className="text-justify ml-4 px-12 py-8 rounded-4xl">
       <h1 className="text-4xl  mb-6 ">Envios</h1>
 
       <h2 className="text-3xl mb-4 ">Tarifas envío</h2>

@@ -5,7 +5,7 @@ import { prepareProducts } from "../helpers";
 import { useFilteredProducts,  } from "../hooks";
 import { Pagination } from "../components/shared/Pagination";
 
-export const MedPages = () => {
+export const MedsPages = () => {
   const [page, setPage] = useState(1);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
 

@@ -5,7 +5,7 @@ export const Banner = () => {
   <div className="relative bg-gray-900 text-white">
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-90 h-full"
-        style={{backgroundImage:'url(/public/img/Farmacia.jpg)'}}
+        style={{backgroundImage:'url(/img/Farmacia.jpg)'}}
         
       />
       {/* overlay */}
