@@ -7,7 +7,7 @@ import { BsChatLeftText } from "react-icons/bs";
 import { ProductDescription } from "../components/one-product/ProductDescription";
 import { GridImages } from "../components/one-product/GridImages";
 import { useProduct } from "../hooks/products/useProduct";
-import { use, useEffect, useMemo, useState } from "react";
+import {  useEffect, useMemo, useState } from "react";
 import { VariantsProduct } from "../interface";
 import { Tag } from "../components/shared/Tag";
 import { Loader } from "../components/shared/Loader";
@@ -170,7 +170,7 @@ export const MedPage = () => {
           {/* caracteristicas del producto */}
           <ul className="space-y-2 ml-7 my-10">
             {product.features.map((feature) => (
-              <li className="text-sm flex items-center gap-2 tracking-tight font-medium">
+              <li key={feature} className="text-sm flex items-center gap-2 tracking-tight font-medium">
                 <span className="bg-black w-[6px] h-[6px] rounded-full" />
                 {feature}
               </li>

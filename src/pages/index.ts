@@ -3,6 +3,9 @@ export * from './HomePage'
 export * from './MedsPages'
 export * from './MedPage'
 export * from './ShipmentsPage'
+export * from './LoginPage'
+export * from './RegisterPage'
+export * from './OrdersUserPage'
 
 /*
 git add .

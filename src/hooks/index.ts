@@ -1,9 +1,14 @@
-/*
-productos
-*/
+/*********************************/
+/*          productos            */
+/*********************************/
 
 export * from './products/useProducts';
-//filtros de los productos por tipo
 export * from './products/useFiteredProducts';
-
 export * from './products/useHomeProducts'
+
+/**********************************/
+/*              AUTH              */
+/**********************************/
+export * from "./auth/useLogin";
+export * from "./auth/useRegister"; 
+export * from "./auth/useUser";

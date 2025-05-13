@@ -20,7 +20,7 @@ export const HomePage = () => {
           title="Nuevos Medicamentos"
           products={preparedRecentProducts}
         />
-      )},
+      )}
 
       {isLoading ? (
         <ProductGridSkeleton numberOfProducts={4} />

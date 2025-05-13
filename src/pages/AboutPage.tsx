@@ -5,7 +5,7 @@ export const AboutPage = () => {
         Nuestra Empresa
       </h1>
       <img
-        src=""
+        src="ss"
         alt="Imagen de fondo"
         className="h-[500px] w-full object-cover"
       />

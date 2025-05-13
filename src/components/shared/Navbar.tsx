@@ -1,10 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 import { navbarlinks } from "../../constants/links";
-import { HiOutlineSearch, HiOutlineShoppingBag } from "react-icons/hi";
+import {
+  HiOutlineSearch,
+  HiOutlineShoppingBag,
+  HiOutlineUser,
+} from "react-icons/hi";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { Logo } from "./Logo";
 import { useGlobalStore } from "../../store/global.store";
 import { useCartStore } from "../../store/cart.store";
+import { useUser } from "../../hooks";
+import { LuLoader } from "react-icons/lu";
 export const Navbar = () => {
   //setea la funcion de abrir la barra de navegacion
   const openSheet = useGlobalStore((state) => state.openSheet);
@@ -13,7 +19,9 @@ export const Navbar = () => {
     (state) => state.setActiveNavMobile
   );
   const totalItemsInCart = useCartStore((state) => state.totalItemsInCart); // se obtiene el total de items en el carrito
-  
+
+  const { session, isLoading } = useUser(); // se obtiene la sesion del usuario
+  const userId = session?.user.id; // se obtiene el id del usuario
 
   return (
     <header className="bg-white text-black py-4 flex items-center justify-between px-5 border-b border-slate-200 lg:px-12">
@@ -38,14 +46,22 @@ export const Navbar = () => {
         <button onClick={() => openSheet("search")}>
           <HiOutlineSearch size={25} />
         </button>
-        <div className="relative">
-          <Link
-            to="/account"
-            className="border-2 border-slate-700 w-9 h-9 rounded-full grid place-items-center text-lg font-bold"
-          >
-            A
+        {isLoading ? ( // muestra un loading y su icono si la peticion esta en curso
+          <LuLoader className="animate-spin" size={60} />
+        ) : session ? ( // muestra el icono de usuario si la sesion esta activa
+          <div className="relative">
+            <Link
+              to="/account"
+              className="border-2 border-slate-700 w-9 h-9 rounded-full grid place-items-center text-lg font-bold"
+            >
+              R
+            </Link>
+          </div>
+        ) : (
+          <Link to="/login">
+            <HiOutlineUser size={25} />
           </Link>
-        </div>
+        )}
         <button className="relative" onClick={() => openSheet("cart")}>
           <span className="absolute -bottom-2 -right-2 w-5 h-5 grid place-items-center bg-black text-white text-xs rounded-full">
             {totalItemsInCart}
