@@ -6,6 +6,9 @@ export * from './ShipmentsPage'
 export * from './LoginPage'
 export * from './RegisterPage'
 export * from './OrdersUserPage'
+export * from './CheckOutPage'
+export * from './ThankyouPage'
+export * from './OrderUserPage'
 
 /*
 git add .

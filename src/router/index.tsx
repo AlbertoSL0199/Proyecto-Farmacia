@@ -9,8 +9,11 @@ import {
   LoginPage,
   RegisterPage,
   OrdersPage,
+  ThankyouPage,
+  OrderUserPage,
 } from "../pages";
 import { ClientLayout } from "../layouts/ClientLayout";
+import { CheckOutPage } from "../pages/CheckOutPage";
 
 export const router = createBrowserRouter([
   {
@@ -54,14 +57,28 @@ export const router = createBrowserRouter([
             // define el path para la ruta de los pedidos
             //redirecciona a la ruta de pedidos
             path: "",
-            element: <Navigate to="/account/pedidos"/>,
+            element: <Navigate to="/account/pedidos" />,
           },
           {
             path: "pedidos",
             element: <OrdersPage />,
           },
+          {
+            path: "pedidos/:id",
+            element: <OrderUserPage />,
+          },
         ],
       },
     ],
+  },
+  // define el path para la ruta de checkout
+  //ya no esta envuelto en el layout de RootLayout (diferencia de anteriores paginas)
+  {
+    path: "checkout",
+    element: <CheckOutPage />,
+  },
+  {
+    path: "checkout/:id/thank-you",
+    element: <ThankyouPage />,
   },
 ]);

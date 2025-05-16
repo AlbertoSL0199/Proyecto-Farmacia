@@ -115,6 +115,8 @@ const storeApi: StateCreator<CartState> = (set) => ({
   },
 });
 
-export const useCartStore = create<CartState>()(devtools(
-  persist(storeApi, { name: "cart_store" })// persistencia del carrito en el local storage
-));
+export const useCartStore = create<CartState>()(
+  devtools(
+    persist(storeApi, { name: "cart_store" }) // persistencia del carrito en el local storage
+  )
+);

@@ -40,7 +40,7 @@ export const Cart = () => {
 
           <div className="mt-4 p-7">
             <Link
-              to="/chechout"
+              to="/checkout"
               className="w-full bg-black text-white py-3 rounded-full flex items-center justify-center gap-3"
             >
               <RiSecurePaymentLine size={24} />
