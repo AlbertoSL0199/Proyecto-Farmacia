@@ -31,7 +31,7 @@ export const ClientLayout = () => {
   };
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col px-15">
       {
         //menu de navegacion
       }
@@ -50,7 +50,7 @@ export const ClientLayout = () => {
         </button>
       </nav>
 
-      <main className="container mt-12 flex-1">
+      <main className="containe  flex-1">
         <Outlet/>
       </main>
     </div>

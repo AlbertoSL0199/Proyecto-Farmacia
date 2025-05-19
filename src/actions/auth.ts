@@ -125,3 +125,17 @@ export const getSession = async () => {
     throw new Error("Error al obtener la sesión");
   }
 };
+
+export const getUserData = async (userId: string) => {
+  
+    const { data, error } = await supabase
+      .from("customers")
+      .select("*")
+      .eq("user_id", userId)
+      .single();
+    if (error) {
+      console.log(error);
+      throw new Error("Error al obtener el usuario");
+    }
+    return data;
+};

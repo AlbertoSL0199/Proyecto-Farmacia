@@ -210,6 +210,7 @@ export const getOrdersById = async (orderId: number) => {
     },
     total_amount: order.total_amount,
     status: order.status,
+    created_at:order.created_at,
     address: {
       addressLine1: order.addresses?.address_line1,
       addressLine2: order.addresses?.address_line2,

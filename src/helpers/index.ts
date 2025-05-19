@@ -45,3 +45,30 @@ export const prepareProducts = (products: Product[]) => {
     }
   });
 };
+
+//funcion para formatear la fecha a formato  ddmmmmyyyy
+export const formatDateLong = (date: string) : string =>{
+  const dateObject = new Date (date);
+
+  return dateObject.toLocaleDateString("es-ES", {
+    year:"numeric",
+    month: "long",
+    day: "numeric",
+  } )
+}
+
+//funcion para obtener el estado del pedido en español
+export const getStatus = (status: string) : string => {
+  //se podria obiar al ingresar datos en español
+  switch (status){
+    case "Pending":
+      return "Pendiente"; 
+    case "Paid":
+      return "Pagado"; 
+    case "Shipped":
+      return "Enviado"; 
+    case "Delivered":
+      return "Entregado"; 
+    default: return status;
+  }
+}

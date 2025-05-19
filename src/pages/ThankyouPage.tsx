@@ -1,18 +1,35 @@
-import { Link, useParams } from "react-router-dom";
-import { useOrder } from "../hooks";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { useOrder, useUser } from "../hooks";
 import { Loader } from "../components/shared/Loader";
 import { CiCircleCheck } from "react-icons/ci";
 import { formatPrice } from "../helpers";
+import { supabase } from "../supabase/client";
+import { useEffect } from "react";
 
 export const ThankyouPage = () => {
   const { id } = useParams<{ id: string }>();
 
   const { data, isLoading, isError } = useOrder(Number(id));
 
-  if (isLoading || !data) return <Loader />;
+  //validar autenticidad de usuario logeado
+  const { isLoading: isLoadingSession } = useUser();
+  const navigate = useNavigate(); //redirecciona links
 
-  if (isError ) return <div>Error al cargar la ordern </div>;
+  useEffect(() => {
+    supabase.auth.onAuthStateChange((event, session) => {
+      if (event === "SIGNED_OUT" || !session) {
+        //si no hay sesion proteccion de rutas
+        //verifica si la sesion del usuario esta autenticada o cierre sesion
+        //si no hay sesion redirecciona a la pagina de login
+        navigate("/login");
+      }
+    });
+  }, [navigate]);
+
+  if (isError) return <div>Error al cargar la ordern </div>;
   
+  if (isLoadingSession || isLoading || !data) return <Loader />;
+
   return (
     <div className="flex flex-col h-screen">
       <header className="text-black flex items-center justify-center flex-col px-10 py-12">
@@ -24,7 +41,7 @@ export const ThankyouPage = () => {
           <span className="text-cyan-600">Martina</span>
         </Link>
       </header>
-      <main className="container flex-1 flex flex-col items-center gap-10">
+      <main className="containe flex-1 flex flex-col items-center gap-10">
         <div className="flex gap-3 items-center">
           <CiCircleCheck size={40} />
           <p className="text-4xl">¡Gracias, {data.customer.full_name}</p>

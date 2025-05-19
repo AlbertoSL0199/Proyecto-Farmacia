@@ -4,7 +4,7 @@ import { MdAddBusiness, MdLocalShipping } from "react-icons/md";
 
 export const Shipments = () => {
   return (
-    <div className="hidden md:flex space-x-5 py-5 self-center lg:grid-cols-3 lg:gap-10">
+    <div className="hidden md:flex space-x-5 py-2 self-center lg:grid-cols-3 lg:gap-10">
       <Link to="/envios">
         <div className="flex items-center gap-6">
           <MdLocalShipping size={40} className="text-slate-600" />
