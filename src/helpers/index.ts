@@ -46,13 +46,24 @@ export const prepareProducts = (products: Product[]) => {
   });
 };
 
-//funcion para formatear la fecha a formato  ddmmmmyyyy
+//funcion para formatear la fecha a formato  dia mes año
 export const formatDateLong = (date: string) : string =>{
   const dateObject = new Date (date);
 
   return dateObject.toLocaleDateString("es-ES", {
     year:"numeric",
     month: "long",
+    day: "numeric",
+  } )
+}
+
+//funcion para formatear la fecha a formato  dd/mm/yyyy
+export const formatDateShort = (date: string) : string =>{
+  const dateObject = new Date (date);
+
+  return dateObject.toLocaleDateString("es-ES", {
+    year:"numeric",
+    month: "2-digit",
     day: "numeric",
   } )
 }

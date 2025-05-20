@@ -10,6 +10,10 @@ export * from './CheckOutPage'
 export * from './ThankyouPage'
 export * from './OrderUserPage'
 
+/*************************************/
+/*          DASHBOARD PAGES          */
+/*************************************/
+export * from './admin_dashboard/DashboardProductsPage'
 /*
 git add .
 git commit -m " actualizacion en bd   "
