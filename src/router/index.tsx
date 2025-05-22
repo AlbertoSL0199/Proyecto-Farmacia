@@ -12,6 +12,7 @@ import {
   ThankyouPage,
   OrderUserPage,
   DashboardProductsPage,
+  DashboardNewProductsPage,
 } from "../pages";
 import { ClientLayout } from "../layouts/ClientLayout";
 import { CheckOutPage } from "../pages/CheckOutPage";
@@ -92,6 +93,7 @@ export const router = createBrowserRouter([
         element: <Navigate to="/dashboard/productos" />,
       },
       { path: "productos", element: <DashboardProductsPage/> },
+      { path: "productos/new", element: <DashboardNewProductsPage/> },
     ],
   },
 ]);

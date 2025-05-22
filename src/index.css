@@ -5,7 +5,9 @@
 }
 .containe {
   padding: 2rem;
-}
+}@plugin "@tailwindcss/typography";
+
+@tailwind utilities;
 
 /* clases personalizadas*/
 .btn-paginated {
@@ -13,9 +15,15 @@
   disabled:opacity-50 disabled:cursor-not-allowed disabled:border-slate-800 disabled:text-slate-800
   disabled:hover:bg-white disabled:hover:text-slate-700;
 }
-@plugin "@tailwindcss/typography";
 
-@tailwind utilities;
+.btn-primary{
+ @apply bg-black text-white py-2 px-3 text-sm font-medium rounded-md
+}
+
+.btn-secondary-outline{
+@apply border border-slate-400 text-slate-600 py-2 px-3 text-sm font-medium rounded-md
+
+}
 
 @layer utilities {
   /* Keyframes */

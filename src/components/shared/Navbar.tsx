@@ -23,7 +23,7 @@ export const Navbar = () => {
   const { session, isLoading } = useUser(); // se obtiene la sesion del usuario
   const userId = session?.user.id; // se obtiene el id del usuario
 
-  const {data: customer} = useCustomer(userId!);
+  const { data: customer } = useCustomer(userId!);
 
   return (
     <header className="bg-white text-black py-4 flex items-center justify-between px-5 border-b border-slate-200 lg:px-12">

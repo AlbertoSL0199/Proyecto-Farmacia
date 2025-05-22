@@ -32,6 +32,7 @@ export const getFilteredProducts = async ({
   let query = supabase
     .from("products")
     .select("*, variants(*)", { count: "exact" })
+    //.eq("brand", "prueba")
     .order("created_at", { ascending: false })
     .range(from, to);
 

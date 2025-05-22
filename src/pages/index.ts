@@ -14,6 +14,7 @@ export * from './OrderUserPage'
 /*          DASHBOARD PAGES          */
 /*************************************/
 export * from './admin_dashboard/DashboardProductsPage'
+export * from './admin_dashboard/DashboardNewProductsPage'
 /*
 git add .
 git commit -m " actualizacion en bd   "

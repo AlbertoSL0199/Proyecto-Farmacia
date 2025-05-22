@@ -83,3 +83,12 @@ export const getStatus = (status: string) : string => {
     default: return status;
   }
 }
+
+//funcion para generar el slug
+export const generateSlug =( name:string ):string => {
+  return name
+    .toLowerCase()
+    //acepta letras a-z, numeros y remplaza los espacios con -
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/(^-|-$)+/g,"");
+}
